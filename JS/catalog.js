@@ -69,3 +69,22 @@ if (modalBackdrop) modalBackdrop.addEventListener('click', closeOrderModal);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal?.classList.contains('is-open')) closeOrderModal();
 });
+
+/* Opening page animation */
+(function initCatalogIntro() {
+  const body = document.body;
+  if (!body.classList.contains('page-catalog')) return;
+
+  if (prefersReducedMotion) {
+    body.classList.add('catalog-intro-done', 'catalog-ready');
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    body.classList.add('catalog-intro-play');
+  });
+
+  window.setTimeout(() => {
+    body.classList.add('catalog-intro-done', 'catalog-ready');
+  }, 850);
+})();

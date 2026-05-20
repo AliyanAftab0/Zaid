@@ -15,8 +15,25 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" /></noscript>
   <link rel="stylesheet" href="CSS/styles.css" />
   <link rel="stylesheet" href="CSS/catalog.css" />
+  <noscript>
+    <style>
+      .catalog-page-intro { display: none !important; }
+      .page-catalog .catalog-hero,
+      .page-catalog .catalog-toolbar,
+      .page-catalog .catalog-item { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
 </head>
 <body class="page-catalog">
+
+  <div class="catalog-page-intro" aria-hidden="true">
+    <div class="catalog-intro-inner">
+      <img src="images/logo.png" alt="" class="catalog-intro-logo" width="88" height="88" decoding="async" />
+      <p class="catalog-intro-brand">Resin Dreams</p>
+      <p class="catalog-intro-tag">Full Catalog</p>
+      <span class="catalog-intro-shimmer" aria-hidden="true"></span>
+    </div>
+  </div>
 
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
