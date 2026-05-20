@@ -5,7 +5,7 @@ Single-page brochure site for handmade resin art (Karachi). Orders via WhatsApp.
 ## Files
 
 - `index.html` — full site (HTML, CSS, JS)
-- `logo.png` — brand logo
+- `images/logo.png` — brand logo (also used as favicon)
 - `images/` — product and section photos
 - `CONTENT.md` — contact info and owner verification checklist
 

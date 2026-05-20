@@ -31,5 +31,5 @@ Use this file to verify all public-facing details with the business owner before
 
 ## Assets
 
-- Logo: `logo.png` (brand dusty rose `#E3B7B8` + black)
+- Logo: `images/logo.png` (brand dusty rose `#E3B7B8` + black; site favicon)
 - Photos: `images/` folder (sourced from prior CDN; replace with real product photography when ready)
