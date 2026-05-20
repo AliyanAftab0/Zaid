@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resin Dreams | Handmade Resin Art & Jewelry — Karachi, Pakistan</title>
+
+  <meta name="description" content="Resin Dreams — handmade resin art in Karachi. Custom Nikkah plaques, jhumkas, necklaces, keychains & gifts. Cash on delivery across Pakistan." />
+  <meta name="theme-color" content="#E3B7B8" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Resin Dreams | Handmade Resin Art — Karachi" />
+  <meta property="og:description" content="Pakistan's most aesthetic handmade resin art. Order on WhatsApp — COD nationwide." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:locale" content="en_PK" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Resin Dreams | Handmade Resin Art" />
+  <meta name="twitter:description" content="Custom resin plaques, jewelry & gifts — made with love in Karachi." />
+  <meta name="twitter:image" content="logo.png" />
+
+  <!-- ============================================================
+       FONTS — Preconnect for faster load, then stylesheet
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="CSS/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Resin Dreams",
+    "description": "Handmade resin art and jewelry in Karachi, Pakistan",
+    "image": "logo.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Karachi", "addressCountry": "PK" },
+    "telephone": "+92-318-1267800",
+    "url": "https://www.instagram.com/resindreams",
+    "sameAs": ["https://www.instagram.com/resindreams", "https://wa.me/923181267800"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       SPARKLE BACKGROUND — created via JS, styled via CSS
+  ============================================================ -->
+  <div id="sparkle-container" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- Brand -->
+        <a href="#home" class="nav-brand" aria-label="Resin Dreams — home">
+          <div class="nav-logo-wrap">
+            <img
+              src="/images/logo.png"
+              alt="Resin Dreams logo"
+              width="44" height="44"
+              loading="eager"
+            />
+          </div>
+          <span class="nav-brand-name">Resin Dreams</span>
+        </a>
+
+        <!-- Center: nav links -->
+        <div class="nav-center">
+          <div class="nav-links-wrap">
+            <ul class="nav-links" role="list">
+              <li><a href="#home"     class="nav-link">Home</a></li>
+              <li><a href="#about"    class="nav-link">About</a></li>
+              <li><a href="#products" class="nav-link">Shop</a></li>
+              <li><a href="#trust"    class="nav-link">Why Us</a></li>
+              <li><a href="#reviews"  class="nav-link">Reviews</a></li>
+              <li><a href="#faq"      class="nav-link">FAQ</a></li>
+              <li><a href="#custom"   class="nav-link">Custom</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: WhatsApp + mobile menu -->
+        <div class="nav-end">
+          <a
+            href="https://wa.me/923181267800?text=Assalamualaikum, I want to order from Resin Dreams"
+            target="_blank"
+            rel="noopener"
+            class="btn-wa nav-wa-desktop"
+            aria-label="Shop on WhatsApp"
+          >
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <button
+            id="hamburger"
+            class="hamburger"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <div class="hamburger-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+
+      </div><!-- /.nav-inner -->
+    </div><!-- /.container -->
+
+    <div id="mobile-backdrop" aria-hidden="true"></div>
+
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <div>
+          <div class="mobile-menu-title">Resin Dreams</div>
+          <div class="mobile-menu-sub">Menu</div>
+        </div>
+        <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">×</button>
+      </div>
+
+      <div class="mobile-menu-body" role="menu">
+        <a href="#home"     class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">🏠</span><span class="mobile-link-label">Home</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+        <a href="#about"    class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">✨</span><span class="mobile-link-label">About</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+        <a href="#products" class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">🛍️</span><span class="mobile-link-label">Shop</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+        <a href="#trust"    class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">💎</span><span class="mobile-link-label">Why Us</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+        <a href="#reviews"  class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">⭐</span><span class="mobile-link-label">Reviews</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+        <a href="#faq"      class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">❓</span><span class="mobile-link-label">FAQ</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+        <a href="#custom"   class="mobile-link" role="menuitem"><span class="mobile-link-icon" aria-hidden="true">🎨</span><span class="mobile-link-label">Custom Orders</span><span class="mobile-link-arrow" aria-hidden="true">›</span></a>
+      </div>
+
+      <div class="mobile-menu-footer">
+        <a
+          href="https://wa.me/923181267800?text=Assalamualaikum, I want to order from Resin Dreams"
+          target="_blank"
+          rel="noopener"
+          class="btn-wa mobile-wa"
+          role="menuitem"
+        >
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Shop On WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="home" aria-label="Hero">
+
+    <!-- Background -->
+    <div class="hero-bg" aria-hidden="true">
+      <img
+        src="images/hero.jpg"
+        alt=""
+        id="hero-img"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-pattern" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <!-- Floating logo -->
+      <img
+        class="hero-logo"
+        src="/images/logo.png"
+
+        alt="Resin Dreams logo"
+        width="192" height="192"
+        loading="eager"
+      />
+
+      <!-- Decorative divider row -->
+      <div class="hero-gem-row" aria-hidden="true">
+        <hr class="divider" style="width: clamp(3rem,8vw,6rem);" />
+        <span style="color: var(--accent-pink); font-size: 1.5rem;">✦</span>
+        <hr class="divider" style="width: clamp(3rem,8vw,6rem);" />
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-title font-playfair">
+        Your Special Day, Preserved
+        <span class="gold-text">Forever</span>
+        in Resin
+        <span class="animate-gentle-pulse" style="display:inline-block;">✨</span>
+      </h1>
+
+      <!-- Subline -->
+      <p class="hero-subtitle">
+        Pakistan's Most Aesthetic Handmade Resin Art. Custom Nikkah Plaques, Jhumkas,
+        Necklaces, Name Keychains &amp; Gifts —
+        <strong>Made With Love In Karachi.</strong>
+      </p>
+
+      <!-- CTA -->
+      <div class="hero-cta">
+        <a
+          href="https://wa.me/923181267800?text=Assalamualaikum, I want to order from Resin Dreams"
+          target="_blank"
+          rel="noopener"
+          class="btn-wa-lg"
+          aria-label="Shop on WhatsApp now"
+        >
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Shop On WhatsApp Now
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="hero-badges" aria-label="Trust indicators">
+        <div class="hero-badge">🤲 100% Handmade</div>
+        <div class="hero-badge">💳 Cash on Delivery</div>
+        <div class="hero-badge">🚚 3–5 Day Delivery</div>
+        <div class="hero-badge">📍 Made in Karachi</div>
+      </div>
+    </div><!-- /.hero-content -->
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+
+  </section><!-- /#home -->
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about" aria-label="About Resin Dreams">
+    <div class="about-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image column -->
+        <div class="reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-img-tilt" aria-hidden="true"></div>
+            <div class="about-img-frame">
+              <img
+                src="images/about.jpg"
+                alt="Handmade resin art pieces laid out on a surface"
+                loading="lazy"
+              />
+            </div>
+            <!-- Floating stat -->
+            <div class="about-stat animate-gentle-pulse">
+              <div class="about-stat-num gold-text">200+</div>
+              <div class="about-stat-label">Happy Customers</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="reveal-right">
+          <div class="pill-label">
+            <span style="color:var(--accent-pink);">✦</span>
+            About Resin Dreams
+            <span style="color:var(--accent-pink);">✦</span>
+          </div>
+
+          <h2 class="about-vibes-title">Har Piece Mein Ek Kahani Hai</h2>
+          <div class="about-accent-bar"></div>
+
+          <p class="about-para">
+            <strong>Resin Dreams</strong> sirf ek dukan nahi, yeh ek <em>jazba</em> hai.
+            Hum machine nahi, <strong style="color:var(--text-dark);">haath se banate hain</strong>
+            — is liye har Jhumka, har Plaque, har Keychain duniya mein ek hi hai.
+          </p>
+          <p class="about-para">
+            Aapka naam, aapki tareekh, aapka rang —
+            <strong>Resin mein hamesha ke liye mehfooz.</strong>
+          </p>
+
+          <div class="about-chips">
+            <div class="about-chip">
+              <span class="about-chip-icon">🎨</span>
+              <div>
+                <div class="about-chip-label">Custom Designs</div>
+                <div class="about-chip-sub">Your vision, our craft</div>
+              </div>
+            </div>
+            <div class="about-chip">
+              <span class="about-chip-icon">🌸</span>
+              <div>
+                <div class="about-chip-label">Dried Flowers</div>
+                <div class="about-chip-sub">Preserved in resin</div>
+              </div>
+            </div>
+            <div class="about-chip">
+              <span class="about-chip-icon">✨</span>
+              <div>
+                <div class="about-chip-label">Gold Accents</div>
+                <div class="about-chip-sub">Premium finishing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- /#about -->
+
+  <!-- ============================================================
+       PRODUCTS SECTION
+  ============================================================ -->
+  <section id="products" aria-label="Product collections">
+    <div class="products-bg" aria-hidden="true"></div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="section-header reveal">
+        <div class="pill-label">🛍️ Our Collections ✨</div>
+        <h2 class="section-title font-playfair">
+          Explore Our <span class="gold-text">Dream</span> Collections
+        </h2>
+        <p class="section-sub">Every piece is crafted by hand, making each one uniquely yours</p>
+        <div class="section-divider-wrap"><hr class="divider" /></div>
+      </div>
+
+      <!-- Product grid -->
+      <div class="products-grid">
+
+        <!-- 1. Nikkah Plaques -->
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Nikkah%20Plaques%20from%20Resin%20Dreams" class="product-card reveal-scale delay-1" target="_blank" rel="noopener" aria-label="Order Nikkah Plaques on WhatsApp">
+          <img
+            src="images/product-nikkah.jpg"
+            alt="Custom Nikkah Plaque — beautifully crafted resin wedding plaque"
+            loading="lazy"
+          />
+          <div class="product-card-body">
+            <div class="product-card-emoji">💍</div>
+            <h3 class="product-card-title font-playfair">Nikkah Plaques</h3>
+            <p class="product-card-tagline">"Aap ki shaadi ki pehli nishani"</p>
+            <div class="product-card-footer">
+              <span class="product-price">Rs 4,000 – 8,000</span>
+              <span class="product-cat-label">Wedding &amp; Baat Pakki</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2. Resin Jhumkas -->
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Resin%20Jhumkas%20from%20Resin%20Dreams" class="product-card reveal-scale delay-2" target="_blank" rel="noopener" aria-label="Order Resin Jhumkas on WhatsApp">
+          <img
+            src="images/product-jhumkas.jpg"
+            alt="Resin Jhumkas — handmade floral earrings"
+            loading="lazy"
+          />
+          <div class="product-card-body">
+            <div class="product-card-emoji">✨</div>
+            <h3 class="product-card-title font-playfair">Resin Jhumkas</h3>
+            <p class="product-card-tagline">"Aisa zevar jo sirf aap ke paas ho ga"</p>
+            <div class="product-card-footer">
+              <span class="product-price">Rs 1,500 – 4,000</span>
+              <span class="product-cat-label">Earrings &amp; Jhumkas</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3. Necklaces -->
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20a%20Resin%20Necklace%20from%20Resin%20Dreams" class="product-card reveal-scale delay-3" target="_blank" rel="noopener" aria-label="Order Resin Necklaces on WhatsApp">
+          <img
+            src="images/product-necklaces.jpg"
+            alt="Resin Necklaces — elegant handmade pendants"
+            loading="lazy"
+          />
+          <div class="product-card-body">
+            <div class="product-card-emoji">💎</div>
+            <h3 class="product-card-title font-playfair">Resin Necklaces</h3>
+            <p class="product-card-tagline">"Gale ki shaan, Resin ki pehchaan"</p>
+            <div class="product-card-footer">
+              <span class="product-price">Rs 2,000 – 5,000</span>
+              <span class="product-cat-label">Pendants &amp; Chains</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. Name Keychains -->
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Name%20Keychains%20from%20Resin%20Dreams" class="product-card reveal-scale delay-4" target="_blank" rel="noopener" aria-label="Order Name Keychains on WhatsApp">
+          <img
+            src="images/product-keychains.jpg"
+            alt="Custom Name Keychains — personalised resin charms"
+            loading="lazy"
+          />
+          <div class="product-card-body">
+            <div class="product-card-emoji">🔑</div>
+            <h3 class="product-card-title font-playfair">Name Keychains</h3>
+            <p class="product-card-tagline">"Naam mein kya rakha hai? Resin mein sab kuch"</p>
+            <div class="product-card-footer">
+              <span class="product-price">Rs 700 – 1,800</span>
+              <span class="product-cat-label">Custom Alphabet &amp; Charms</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. Decorative Trays — wide card -->
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Decorative%20Trays%20from%20Resin%20Dreams" class="product-card product-card--wide reveal-scale delay-5" target="_blank" rel="noopener" aria-label="Order Decorative Trays on WhatsApp">
+          <img
+            src="images/product-trays.jpg"
+            alt="Decorative Resin Trays and Home Decor pieces"
+            loading="lazy"
+          />
+          <div class="product-card-body">
+            <div class="product-card-emoji">🏠</div>
+            <h3 class="product-card-title font-playfair">Decorative Trays &amp; Home Decor</h3>
+            <p class="product-card-tagline">"Aap ke ghar ka har kona bolay — yeh khaas hai"</p>
+            <div class="product-card-footer">
+              <span class="product-price">Rs 2,500 – 5,000</span>
+              <span class="product-cat-label">Trays, Bookmarks, Name Plates &amp; More</span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /.products-grid -->
+
+      <!-- Shop CTA -->
+      <div class="products-cta reveal">
+        <a
+          href="https://wa.me/923181267800?text=Assalamualaikum, I want to see your Resin Dreams collection!"
+          target="_blank"
+          rel="noopener"
+          class="btn-gold"
+        >
+          <span>🛍️</span>
+          Shop All Collections
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section><!-- /#products -->
+
+  <!-- ============================================================
+       TRUST SECTION
+  ============================================================ -->
+  <section id="trust" aria-label="Why choose Resin Dreams">
+    <div class="trust-bg" aria-hidden="true"></div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="section-header reveal">
+        <div class="pill-label">💎 Why Choose Us 💎</div>
+        <h2 class="section-title font-playfair">
+          The <span class="gold-text">Resin Dreams</span> Promise
+        </h2>
+        <div class="section-divider-wrap"><hr class="divider" /></div>
+      </div>
+
+      <div class="trust-grid">
+
+        <!-- Card 1 -->
+        <div class="trust-card reveal delay-1">
+          <a href="https://www.instagram.com/resindreams" class="trust-card-img trust-card-img--link" target="_blank" rel="noopener" aria-label="Watch behind the scenes on Instagram">
+            <img
+              src="images/trust-handmade.jpg"
+              alt="Handmade resin craft process — behind the scenes"
+              loading="lazy"
+            />
+            <div class="trust-card-img-overlay"></div>
+            <div class="trust-badge">
+              <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              Behind The Scenes
+            </div>
+          </a>
+          <div class="trust-card-body">
+            <div class="trust-card-icon-row">
+              <div class="trust-card-icon">🤲</div>
+              <h3 class="trust-card-title font-playfair">100% Handmade With Love</h3>
+            </div>
+            <p class="trust-card-text">
+              Har piece haath se banta hai — mixing, pouring, demolding. Koi machine nahi,
+              sirf mohabbat. Watch our satisfying demolding process!
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="trust-card reveal delay-2">
+          <div class="trust-card-img">
+            <img
+              src="images/trust-shipping.jpg"
+              alt="Packed orders ready to dispatch — Resin Dreams shipping"
+              loading="lazy"
+            />
+            <div class="trust-card-img-overlay"></div>
+            <div class="trust-badge">📦 Packed with Love</div>
+          </div>
+          <div class="trust-card-body">
+            <div class="trust-card-icon-row">
+              <div class="trust-card-icon">🚚</div>
+              <h3 class="trust-card-title font-playfair">200+ Happy Customers Across Pakistan</h3>
+            </div>
+            <p class="trust-card-text">
+              Karachi se Lahore tak, Islamabad se Peshawar tak — hum Pakistan ke har kone
+              mein pohanchte hain. 3–5 working days delivery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="trust-card reveal delay-3">
+          <div class="trust-card-img">
+            <img
+              src="images/trust-custom.jpg"
+              alt="Custom design process — your idea turned into resin art"
+              loading="lazy"
+            />
+            <div class="trust-card-img-overlay"></div>
+            <div class="trust-badge">✨ Custom Orders</div>
+          </div>
+          <div class="trust-card-body">
+            <div class="trust-card-icon-row">
+              <div class="trust-card-icon">✨</div>
+              <h3 class="trust-card-title font-playfair">Your Dream, Our Resin</h3>
+            </div>
+            <p class="trust-card-text">
+              Jo design aap ke zehen mein hai, uski tasveer bhej dein. Hum usay haqeeqat
+              bana dein ge. Har design unique, har piece special.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.trust-grid -->
+    </div>
+  </section><!-- /#trust -->
+  <!-- ============================================================
+       REVIEWS SECTION
+  ============================================================ -->
+  <section id="reviews" aria-label="Customer reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="pill-label">⭐ Customer Love</div>
+        <h2 class="section-title font-playfair">
+          What Our <span class="gold-text">Dreamers</span> Say
+        </h2>
+        <div class="section-divider-wrap"><hr class="divider" /></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal delay-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Mere Nikkah plaque ki har detail perfect thi. Guests ne poocha kahan se liya!"</p>
+          <div class="review-author">Ayesha K.</div>
+          <div class="review-city">Karachi</div>
+        </div>
+        <div class="review-card reveal delay-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Jhumkas itne unique hain — lightweight aur bohot aesthetic. Dobara order karungi."</p>
+          <div class="review-author">Fatima R.</div>
+          <div class="review-city">Lahore</div>
+        </div>
+        <div class="review-card reveal delay-3">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Custom keychain gift tha — packaging bhi cute thi. WhatsApp pe response fast tha."</p>
+          <div class="review-author">Zainab M.</div>
+          <div class="review-city">Islamabad</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ SECTION
+  ============================================================ -->
+  <section id="faq" aria-label="Frequently asked questions">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="pill-label">❓ FAQ</div>
+        <h2 class="section-title font-playfair">
+          Common <span class="gold-text">Questions</span>
+        </h2>
+        <div class="section-divider-wrap"><hr class="divider" /></div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Do you offer Cash on Delivery?</summary>
+          <p class="faq-answer">Yes — COD is available across Pakistan. You pay when your order arrives at your doorstep.</p>
+        </details>
+        <details class="faq-item reveal delay-1">
+          <summary>How long does delivery take?</summary>
+          <p class="faq-answer">Most orders reach you in 3–5 working days after confirmation, depending on your city and custom work.</p>
+        </details>
+        <details class="faq-item reveal delay-2">
+          <summary>Can I order a fully custom design?</summary>
+          <p class="faq-answer">Absolutely. Send your idea or reference photo on WhatsApp. We share a mockup before we start crafting.</p>
+        </details>
+        <details class="faq-item reveal delay-3">
+          <summary>Are two pieces exactly the same?</summary>
+          <p class="faq-answer">No — every item is handmade, so each piece is one of a kind. That is the beauty of Resin Dreams.</p>
+        </details>
+        <details class="faq-item reveal delay-4">
+          <summary>How do I place an order?</summary>
+          <p class="faq-answer">Tap any WhatsApp button on this site, tell us what you want, and we guide you through size, colour, and payment.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============================================================
+       CUSTOM ORDER SECTION
+  ============================================================ -->
+  <section id="custom" aria-label="Custom resin orders">
+    <div class="custom-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="custom-card">
+
+        <!-- Image side -->
+        <div class="custom-img-col reveal-left">
+          <img
+            src="images/about.jpg"
+            alt="Custom resin art design being crafted"
+            loading="lazy"
+          />
+          <div class="custom-img-tint" aria-hidden="true"></div>
+        </div>
+
+        <!-- Content side -->
+        <div class="custom-content reveal-right">
+          <div class="pill-label" style="width:fit-content; margin-bottom:1.25rem;">
+            🎨 Custom Orders
+          </div>
+
+          <h2 class="custom-vibes">Aap Ka Khwab,</h2>
+          <h2 class="custom-subtitle font-playfair gold-text">Hamara Resin</h2>
+          <div class="custom-divider"></div>
+
+          <p class="custom-para">
+            Jo design aap ke zehen mein hai, uski <strong>tasveer bhej dein</strong>.
+            Hum usay haqeeqat bana dein ge. Chahe wo ek custom plaque ho, ek personalized
+            jhumka, ya koi bhi unique gift —
+            <em>hum aap ke khayal ko resin mein dhalti hui khubsurti bana dete hain.</em>
+          </p>
+
+          <div class="custom-steps" role="list">
+            <div class="custom-step" role="listitem">
+              <div class="custom-step-icon">✓</div>
+              <span>Send us your design idea or reference photo</span>
+            </div>
+            <div class="custom-step" role="listitem">
+              <div class="custom-step-icon">✓</div>
+              <span>We'll create a mockup and confirm the design</span>
+            </div>
+            <div class="custom-step" role="listitem">
+              <div class="custom-step-icon">✓</div>
+              <span>Handmade with love &amp; delivered to your doorstep</span>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/923181267800?text=Assalamualaikum, I want to place a custom order! Here is my design idea:"
+            target="_blank"
+            rel="noopener"
+            class="btn-wa-lg"
+            style="animation: none;"
+          >
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Send Design on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- /#custom -->
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <a
+    id="float-wa"
+    href="https://wa.me/923181267800?text=Assalamualaikum, I want to order from Resin Dreams"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer aria-label="Site footer">
+    <hr class="divider" aria-hidden="true" />
+
+    <div class="container">
+      <!-- Main footer grid -->
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div>
+          <div class="footer-brand-row">
+            <img
+              class="footer-logo"
+              src="/images/logo.png"
+              alt="Resin Dreams logo"
+              loading="lazy"
+              width="52" height="52"
+            />
+            <div>
+              <div class="footer-brand-name">Resin Dreams</div>
+              <div class="footer-brand-tagline">Handmade with Love</div>
+            </div>
+          </div>
+
+          <p class="footer-desc">
+            Pakistan's most aesthetic handmade resin art store based in Karachi. From Nikkah
+            plaques to custom jhumkas, necklaces &amp; keychains — every piece is crafted by
+            hand with love and dedication.
+          </p>
+
+          <div class="social-row">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/resindreams"
+              target="_blank"
+              rel="noopener"
+              class="social-icon"
+              aria-label="Resin Dreams on Instagram"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/923181267800"
+              target="_blank"
+              rel="noopener"
+              class="social-icon"
+              aria-label="Resin Dreams on WhatsApp"
+              style="--hover-color: #25D366;"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h3 class="footer-col-title font-playfair">Quick Links</h3>
+          <ul class="footer-nav" role="list">
+            <li><a href="#home"><span class="footer-nav-arrow">›</span> Home</a></li>
+            <li><a href="#about"><span class="footer-nav-arrow">›</span> About Us</a></li>
+            <li><a href="#products"><span class="footer-nav-arrow">›</span> Collections</a></li>
+            <li><a href="#trust"><span class="footer-nav-arrow">›</span> Why Us</a></li>
+            <li><a href="#reviews"><span class="footer-nav-arrow">›</span> Reviews</a></li>
+            <li><a href="#faq"><span class="footer-nav-arrow">›</span> FAQ</a></li>
+            <li><a href="#custom"><span class="footer-nav-arrow">›</span> Custom Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer-col-title font-playfair">Contact Us</h3>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Karachi, Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📱</span>
+            <a href="https://wa.me/923181267800" target="_blank" rel="noopener">+92 318 1267800</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>📸</span>
+            <a href="https://www.instagram.com/resindreams" target="_blank" rel="noopener">@resindreams</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>🚚</span>
+            <span>Delivery Across Pakistan</span>
+          </div>
+        </div>
+
+      </div><!-- /.footer-grid -->
+
+      <!-- Delivery info bar -->
+      <div class="delivery-bar">
+        <div class="delivery-item">📍 Karachi, Pakistan</div>
+        <div class="delivery-sep" aria-hidden="true"></div>
+        <div class="delivery-item">🚚 Delivery All Over Pakistan</div>
+        <div class="delivery-sep" aria-hidden="true"></div>
+        <div class="delivery-item">⏰ 3–5 Working Days</div>
+        <div class="delivery-sep" aria-hidden="true"></div>
+        <div class="delivery-item">💰 Cash on Delivery Available</div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Resin Dreams. All rights reserved. Handmade with 💖 in Karachi.</p>
+        <p class="footer-note">Every piece is unique • No two items are exactly the same • Made with love</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — Minimal, purposeful, no bloat
+  ============================================================ -->
+  <script src="JS/script.js"></script>
+
+</body>
+</html>
