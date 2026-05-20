@@ -69,39 +69,3 @@ if (modalBackdrop) modalBackdrop.addEventListener('click', closeOrderModal);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal?.classList.contains('is-open')) closeOrderModal();
 });
-
-document.documentElement.classList.add('js-reveal');
-
-const catalogCards = document.querySelectorAll('.catalog-item.reveal-scale, .catalog-hero.reveal, .catalog-toolbar.reveal');
-if (catalogCards.length && 'IntersectionObserver' in window) {
-  const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0, rootMargin: '80px 0px 80px 0px' }
-  );
-
-  const revealInView = (el) => {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  };
-
-  catalogCards.forEach((el) => {
-    if (revealInView(el)) {
-      el.classList.add('active');
-    } else {
-      obs.observe(el);
-    }
-  });
-
-  window.addEventListener('load', () => {
-    catalogCards.forEach((el) => {
-      if (revealInView(el)) el.classList.add('active');
-    });
-  }, { once: true });
-}

@@ -5,6 +5,14 @@
   background: var(--pearl-white);
 }
 
+/* Catalog always visible — no scroll-reveal hide */
+.page-catalog .catalog-item,
+.page-catalog .catalog-hero,
+.page-catalog .catalog-toolbar {
+  opacity: 1;
+  transform: none;
+}
+
 .page-catalog #sparkle-container {
   display: none;
 }
