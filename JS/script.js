@@ -3,10 +3,9 @@
    RESIN DREAMS — Optimised JS
    • Smooth scroll with offset for fixed navbar
    • Active link tracking via IntersectionObserver
-   • Modern animated hamburger with keyboard support
+   • Mobile menu (slide-in + backdrop)
    • Scroll reveal (single observer, unobserve after fire)
-   • Hero parallax (only when hero visible, passive)
-   • Sparkle pool (capped, self-cleaning)
+   • Light sparkles (deferred, reduced count)
    All listeners marked passive where possible.
 ════════════════════════════════════════════════════════ */
 
@@ -36,16 +35,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const mobLinks = document.querySelectorAll('.mobile-link');
-const sections = document.querySelectorAll('section[id], div[id="home"]');
 
-// Scroll-based navbar glass
+let scrollTicking = false;
 const onScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        scrollTicking = false;
+    });
 };
 window.addEventListener('scroll', onScroll, { passive: true });
-onScroll(); // run on init
+onScroll();
 
-// Active link via IntersectionObserver (most perf-efficient)
 function setActive(id) {
     navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
     mobLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
@@ -67,6 +69,7 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileBackdrop = document.getElementById('mobile-backdrop');
 const mobileClose = document.getElementById('mobile-menu-close');
+const mobileMenuBrand = document.querySelector('.mobile-menu-brand');
 
 function openMenu() {
     mobileMenu.classList.add('open');
@@ -94,13 +97,9 @@ hamburger.addEventListener('click', () => {
     mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-if (mobileClose) {
-    mobileClose.addEventListener('click', closeMenu);
-}
-
-if (mobileBackdrop) {
-    mobileBackdrop.addEventListener('click', closeMenu);
-}
+if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMenu);
+if (mobileMenuBrand) mobileMenuBrand.addEventListener('click', closeMenu);
 
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
@@ -110,10 +109,11 @@ document.addEventListener('keydown', e => {
 });
 
 mobileMenu.querySelectorAll('a').forEach(link => {
+    if (link === mobileMenuBrand) return;
     link.addEventListener('click', closeMenu);
 });
 
-/* ── 3. SCROLL REVEAL — single observer, hardware-accelerated ── */
+/* ── 3. SCROLL REVEAL — single observer ── */
 const revealEls = document.querySelectorAll(
     '.reveal, .reveal-left, .reveal-right, .reveal-scale'
 );
@@ -122,26 +122,27 @@ const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            revealObserver.unobserve(entry.target); // free memory after reveal
+            revealObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-/* ── 4. SPARKLES — capped pool, self-cleaning, GPU-composited ── */
+/* ── 4. SPARKLES — deferred, fewer particles (perf) ── */
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const sparkleContainer = document.getElementById('sparkle-container');
-const MAX_SPARKLES = 20;
+const MAX_SPARKLES = 8;
 let sparkleCount = 0;
+let sparkleIntervalId = null;
 
 function createSparkle() {
-    if (sparkleCount >= MAX_SPARKLES) return;
+    if (!sparkleContainer || sparkleCount >= MAX_SPARKLES) return;
     sparkleCount++;
 
     const s = document.createElement('div');
-    const size = (Math.random() * 4 + 2) + 'px';
-    const dur = (Math.random() * 8 + 5) + 's';
+    const size = (Math.random() * 3 + 2) + 'px';
+    const dur = (Math.random() * 6 + 6) + 's';
 
     s.className = 'sparkle';
     s.style.cssText = `
@@ -149,9 +150,9 @@ function createSparkle() {
         bottom:             -10px;
         width:              ${size};
         height:             ${size};
-        opacity:            ${(Math.random() * 0.5 + 0.2).toFixed(2)};
+        opacity:            ${(Math.random() * 0.4 + 0.15).toFixed(2)};
         animation-duration: ${dur};
-        animation-delay:    ${(Math.random() * 1.5).toFixed(2)}s;
+        animation-delay:    ${(Math.random() * 1).toFixed(2)}s;
       `;
 
     sparkleContainer.appendChild(s);
@@ -159,33 +160,27 @@ function createSparkle() {
     setTimeout(() => {
         s.remove();
         sparkleCount--;
-    }, parseFloat(dur) * 1000 + 2000);
+    }, parseFloat(dur) * 1000 + 1500);
 }
 
-if (!prefersReducedMotion) {
-    for (let i = 0; i < 12; i++) setTimeout(createSparkle, i * 220);
-    setInterval(createSparkle, 1200);
+function startSparkles() {
+    if (prefersReducedMotion || !sparkleContainer) return;
+    for (let i = 0; i < 4; i++) setTimeout(createSparkle, i * 400);
+    sparkleIntervalId = setInterval(createSparkle, 2800);
 }
 
-/* ── 5. HERO PARALLAX — only when hero visible, passive ── */
-const heroImg = document.getElementById('hero-img');
-const heroSection = document.getElementById('home');
-
-if (heroImg && heroSection && !prefersReducedMotion) {
-    const heroObserver = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-            window.addEventListener('scroll', onHeroScroll, { passive: true });
-        } else {
-            window.removeEventListener('scroll', onHeroScroll);
-            heroImg.style.transform = '';
-        }
-    });
-    heroObserver.observe(heroSection);
-}
-
-function onHeroScroll() {
-    const s = window.scrollY;
-    if (s < window.innerHeight) {
-        heroImg.style.transform = `translateY(${(s * 0.28).toFixed(1)}px)`;
+if (document.readyState === 'complete') {
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(startSparkles, { timeout: 2000 });
+    } else {
+        setTimeout(startSparkles, 1500);
     }
+} else {
+    window.addEventListener('load', () => {
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(startSparkles, { timeout: 2000 });
+        } else {
+            setTimeout(startSparkles, 1500);
+        }
+    }, { once: true });
 }

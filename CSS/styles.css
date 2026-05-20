@@ -262,7 +262,6 @@ ul {
     opacity: 0;
     transition: opacity 0.8s var(--ease-luxury),
         transform 0.8s var(--ease-luxury);
-    will-change: opacity, transform;
 }
 
 .reveal {
@@ -326,7 +325,6 @@ ul {
     border-radius: 50%;
     background: var(--gold);
     animation: float-sparkle linear infinite;
-    will-change: transform, opacity;
 }
 
 /* ============================================================
@@ -669,16 +667,51 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     padding: 1.25rem 1.25rem 1rem;
     border-bottom: 1px solid rgba(201, 154, 156, 0.15);
     flex-shrink: 0;
 }
 
+.mobile-menu-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile-menu-brand:hover {
+    opacity: 0.88;
+}
+
+.mobile-menu-logo-wrap {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--brand-rose);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.mobile-menu-logo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mobile-menu-brand-text {
+    min-width: 0;
+}
+
 .mobile-menu-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     color: var(--text-dark);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .mobile-menu-sub {
@@ -933,7 +966,7 @@ body.menu-open {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    will-change: transform;
+    aspect-ratio: 3 / 2;
 }
 
 .hero-bg-overlay {
@@ -1954,13 +1987,17 @@ footer>.divider {
     }
 
     .nav-brand-name {
-        display: none;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-    .nav-brand-name {
         display: block;
+        font-size: 1.2rem;
+        max-width: 9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .nav-logo-wrap {
+        width: 38px;
+        height: 38px;
     }
 }
 

@@ -7,9 +7,11 @@
 
   <meta name="description" content="Resin Dreams — handmade resin art in Karachi. Custom Nikkah plaques, jhumkas, necklaces, keychains & gifts. Cash on delivery across Pakistan." />
   <meta name="theme-color" content="#E3B7B8" />
-  <link rel="icon" href="images/log0.png" type="image/png" sizes="32x32" />
-  <link rel="icon" href="images/log0.png" type="image/png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="images/log0.png" />
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="preload" href="images/hero.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" href="CSS/styles.css" as="style" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Resin Dreams | Handmade Resin Art — Karachi" />
   <meta property="og:description" content="Pakistan's most aesthetic handmade resin art. Order on WhatsApp — COD nationwide." />
@@ -25,9 +27,17 @@
   ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" />
+  </noscript>
 
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/styles.css" />
 
   <script type="application/ld+json">
   {
@@ -61,10 +71,11 @@
         <a href="#home" class="nav-brand" aria-label="Resin Dreams — home">
           <div class="nav-logo-wrap">
             <img
-              src="/images/logo.png"
+              src="images/logo.png"
               alt="Resin Dreams logo"
               width="44" height="44"
               loading="eager"
+              decoding="async"
             />
           </div>
           <span class="nav-brand-name">Resin Dreams</span>
@@ -122,10 +133,15 @@
 
     <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
       <div class="mobile-menu-header">
-        <div>
-          <div class="mobile-menu-title">Resin Dreams</div>
-          <div class="mobile-menu-sub">Menu</div>
-        </div>
+        <a href="#home" class="mobile-menu-brand" aria-label="Resin Dreams — home">
+          <div class="mobile-menu-logo-wrap">
+            <img src="images/logo.png" alt="" width="40" height="40" decoding="async" />
+          </div>
+          <div class="mobile-menu-brand-text">
+            <div class="mobile-menu-title">Resin Dreams</div>
+            <div class="mobile-menu-sub">Menu</div>
+          </div>
+        </a>
         <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">×</button>
       </div>
 
@@ -167,8 +183,11 @@
         src="images/hero.jpg"
         alt=""
         id="hero-img"
+        width="1200"
+        height="800"
         loading="eager"
         fetchpriority="high"
+        decoding="async"
       />
       <div class="hero-bg-overlay"></div>
     </div>
@@ -179,11 +198,11 @@
       <!-- Floating logo -->
       <img
         class="hero-logo"
-        src="/images/logo.png"
-
+        src="images/logo.png"
         alt="Resin Dreams logo"
         width="192" height="192"
         loading="eager"
+        decoding="async"
       />
 
       <!-- Decorative divider row -->
@@ -713,7 +732,7 @@
           <div class="footer-brand-row">
             <img
               class="footer-logo"
-              src="/images/logo.png"
+              src="images/logo.png"
               alt="Resin Dreams logo"
               loading="lazy"
               width="52" height="52"
@@ -819,7 +838,7 @@
   <!-- ============================================================
        JAVASCRIPT — Minimal, purposeful, no bloat
   ============================================================ -->
-  <script src="JS/script.js"></script>
+  <script src="JS/script.js" defer></script>
 
 </body>
 </html>
