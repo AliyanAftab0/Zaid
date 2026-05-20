@@ -58,10 +58,14 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
+    html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+    }
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -255,28 +259,28 @@ ul {
 /* ============================================================
        6. SCROLL REVEAL — hardware-accelerated with transform+opacity
     ============================================================ */
-.reveal,
-.reveal-left,
-.reveal-right,
-.reveal-scale {
+html.js-reveal .reveal,
+html.js-reveal .reveal-left,
+html.js-reveal .reveal-right,
+html.js-reveal .reveal-scale {
     opacity: 0;
     transition: opacity 0.8s var(--ease-luxury),
         transform 0.8s var(--ease-luxury);
 }
 
-.reveal {
+html.js-reveal .reveal {
     transform: translateY(40px);
 }
 
-.reveal-left {
+html.js-reveal .reveal-left {
     transform: translateX(-40px);
 }
 
-.reveal-right {
+html.js-reveal .reveal-right {
     transform: translateX(40px);
 }
 
-.reveal-scale {
+html.js-reveal .reveal-scale {
     transform: scale(0.85);
 }
 
