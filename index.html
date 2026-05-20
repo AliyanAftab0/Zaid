@@ -10,7 +10,7 @@
   <link rel="icon" href="images/logo.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="images/logo.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="images/logo.png" />
-  <link rel="preload" href="images/hero.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" href="images/hero.jpg" as="image" fetchpriority="high" media="(min-width: 768px)" />
   <link rel="preload" href="CSS/styles.css" as="style" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Resin Dreams | Handmade Resin Art — Karachi" />
@@ -29,12 +29,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap"
     media="print"
     onload="this.media='all'"
   />
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" />
   </noscript>
 
   <link rel="stylesheet" href="CSS/styles.css" />
@@ -183,6 +183,8 @@
         loading="eager"
         fetchpriority="high"
         decoding="async"
+        width="1200"
+        height="800"
       />
       <div class="hero-bg-overlay"></div>
     </div>
@@ -272,7 +274,10 @@
               <img
                 src="images/about.jpg"
                 alt="Handmade resin art pieces laid out on a surface"
+                width="900"
+                height="600"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <!-- Floating stat -->
@@ -341,7 +346,7 @@
     <div class="container">
 
       <!-- Header -->
-      <div class="section-header reveal">
+      <div class="section-header">
         <div class="pill-label">🛍️ Our Collections ✨</div>
         <h2 class="section-title font-playfair">
           Explore Our <span class="gold-text">Dream</span> Collections
@@ -354,11 +359,14 @@
       <div class="products-grid">
 
         <!-- 1. Nikkah Plaques -->
-        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Nikkah%20Plaques%20from%20Resin%20Dreams" class="product-card reveal-scale delay-1" target="_blank" rel="noopener" aria-label="Order Nikkah Plaques on WhatsApp">
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Nikkah%20Plaques%20from%20Resin%20Dreams" class="product-card" target="_blank" rel="noopener" aria-label="Order Nikkah Plaques on WhatsApp">
           <img
             src="images/product-nikkah.jpg"
             alt="Custom Nikkah Plaque — beautifully crafted resin wedding plaque"
+            width="800"
+            height="480"
             loading="lazy"
+            decoding="async"
           />
           <div class="product-card-body">
             <div class="product-card-emoji">💍</div>
@@ -372,11 +380,14 @@
         </a>
 
         <!-- 2. Resin Jhumkas -->
-        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Resin%20Jhumkas%20from%20Resin%20Dreams" class="product-card reveal-scale delay-2" target="_blank" rel="noopener" aria-label="Order Resin Jhumkas on WhatsApp">
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Resin%20Jhumkas%20from%20Resin%20Dreams" class="product-card" target="_blank" rel="noopener" aria-label="Order Resin Jhumkas on WhatsApp">
           <img
             src="images/product-jhumkas.jpg"
             alt="Resin Jhumkas — handmade floral earrings"
+            width="800"
+            height="480"
             loading="lazy"
+            decoding="async"
           />
           <div class="product-card-body">
             <div class="product-card-emoji">✨</div>
@@ -390,11 +401,14 @@
         </a>
 
         <!-- 3. Necklaces -->
-        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20a%20Resin%20Necklace%20from%20Resin%20Dreams" class="product-card reveal-scale delay-3" target="_blank" rel="noopener" aria-label="Order Resin Necklaces on WhatsApp">
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20a%20Resin%20Necklace%20from%20Resin%20Dreams" class="product-card" target="_blank" rel="noopener" aria-label="Order Resin Necklaces on WhatsApp">
           <img
             src="images/product-necklaces.jpg"
             alt="Resin Necklaces — elegant handmade pendants"
+            width="800"
+            height="480"
             loading="lazy"
+            decoding="async"
           />
           <div class="product-card-body">
             <div class="product-card-emoji">💎</div>
@@ -408,11 +422,14 @@
         </a>
 
         <!-- 4. Name Keychains -->
-        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Name%20Keychains%20from%20Resin%20Dreams" class="product-card reveal-scale delay-4" target="_blank" rel="noopener" aria-label="Order Name Keychains on WhatsApp">
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Name%20Keychains%20from%20Resin%20Dreams" class="product-card" target="_blank" rel="noopener" aria-label="Order Name Keychains on WhatsApp">
           <img
             src="images/product-keychains.jpg"
             alt="Custom Name Keychains — personalised resin charms"
+            width="800"
+            height="480"
             loading="lazy"
+            decoding="async"
           />
           <div class="product-card-body">
             <div class="product-card-emoji">🔑</div>
@@ -426,11 +443,14 @@
         </a>
 
         <!-- 5. Decorative Trays — wide card -->
-        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Decorative%20Trays%20from%20Resin%20Dreams" class="product-card product-card--wide reveal-scale delay-5" target="_blank" rel="noopener" aria-label="Order Decorative Trays on WhatsApp">
+        <a href="https://wa.me/923181267800?text=Assalamualaikum,%20I%20want%20to%20order%20Decorative%20Trays%20from%20Resin%20Dreams" class="product-card product-card--wide" target="_blank" rel="noopener" aria-label="Order Decorative Trays on WhatsApp">
           <img
             src="images/product-trays.jpg"
             alt="Decorative Resin Trays and Home Decor pieces"
+            width="1000"
+            height="480"
             loading="lazy"
+            decoding="async"
           />
           <div class="product-card-body">
             <div class="product-card-emoji">🏠</div>
@@ -446,7 +466,7 @@
       </div><!-- /.products-grid -->
 
       <!-- Shop CTA -->
-      <div class="products-cta reveal">
+      <div class="products-cta">
         <a href="catalog.html" class="btn-gold">
           <span>🛍️</span>
           View Full Catalog (14 Pieces)

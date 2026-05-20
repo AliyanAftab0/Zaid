@@ -51,20 +51,34 @@ if (revealEls.length) {
         }
       });
     },
-    { threshold: 0, rootMargin: '0px 0px -8% 0px' }
+    { threshold: 0, rootMargin: '0px 0px 0px 0px' }
   );
 
   const revealInView = (el) => {
     const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  };
+
+  const activateReveals = () => {
+    revealEls.forEach((el) => {
+      if (el.closest('#products')) return;
+      if (el.classList.contains('active')) return;
+      if (revealInView(el)) {
+        el.classList.add('active');
+        revealObserver.unobserve(el);
+      }
+    });
   };
 
   revealEls.forEach((el) => {
+    if (el.closest('#products')) return;
     if (revealInView(el)) {
       el.classList.add('active');
     } else {
       revealObserver.observe(el);
     }
   });
+
+  window.addEventListener('load', () => requestAnimationFrame(activateReveals), { once: true });
 }
 

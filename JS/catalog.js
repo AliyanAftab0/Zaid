@@ -83,12 +83,12 @@ if (catalogCards.length && 'IntersectionObserver' in window) {
         }
       });
     },
-    { threshold: 0, rootMargin: '0px 0px -8% 0px' }
+    { threshold: 0, rootMargin: '80px 0px 80px 0px' }
   );
 
   const revealInView = (el) => {
     const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+    return rect.top < window.innerHeight && rect.bottom > 0;
   };
 
   catalogCards.forEach((el) => {
@@ -98,4 +98,10 @@ if (catalogCards.length && 'IntersectionObserver' in window) {
       obs.observe(el);
     }
   });
+
+  window.addEventListener('load', () => {
+    catalogCards.forEach((el) => {
+      if (revealInView(el)) el.classList.add('active');
+    });
+  }, { once: true });
 }

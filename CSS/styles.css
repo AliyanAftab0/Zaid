@@ -1323,6 +1323,19 @@ body.menu-open {
     overflow: hidden;
 }
 
+/* Always visible — no scroll-reveal hide on collections */
+#products .reveal,
+#products .reveal-scale,
+#products .products-cta {
+    opacity: 1;
+    transform: none;
+}
+
+#products .container {
+    position: relative;
+    z-index: 1;
+}
+
 .products-bg {
     position: absolute;
     inset: 0;
