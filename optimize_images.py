@@ -46,6 +46,15 @@ def main():
         compress(p, CATALOG_MAX)
 
     for p in sorted(ROOT.glob("product*.jpg")):
+        name = p.name
+        if name.startswith("product-") or name in LANDING:
+            continue
+        num = name.replace("product", "").replace(".jpg", "")
+        if num.isdigit() and int(num) >= 15:
+            print(f"Catalog {p.name}")
+            compress(p, CATALOG_MAX)
+
+    for p in sorted(ROOT.glob("product*.jpg")):
         if p.name.startswith("product-") and p.name not in LANDING:
             continue
         if p.name in LANDING:
